@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 서비스 개요 (Summary)
+##  서비스 개요 (Summary)
 
 현대 축구의 방대한 이벤트 데이터를 사람이 일일이 분석하는 한계를 극복하기 위해, **자동화된 클러스터링**과 **객관적인 가치 평가(VAEP)**를 결합하였습니다. 코치, 선수, 팬 모두가 특정 팀의 위협적인 전술 패턴을 직관적으로 이해할 수 있도록 돕습니다.
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 🛠 주요 기능 (Key Features)
+##  주요 기능 (Key Features)
 
 ### 1. 데이터 분석 전략 (Data Strategy)
 - **SPADL 변환**: 표준화된 액션 언어(Soccer Player Action Description Language) 포맷 사용
@@ -39,7 +39,7 @@
 
 ---
 
-## 💻 기술 스택 (Tech Stack)
+##  기술 스택 (Tech Stack)
 
 | Category | Technologies |
 | :--- | :--- |
@@ -51,7 +51,7 @@
 
 ---
 
-## 📂 프로젝트 구조 (Project Structure)
+##  프로젝트 구조 (Project Structure)
 
 ```
 .
@@ -67,7 +67,7 @@
 
 ---
 
-## ⚙️ 시작하기 (Getting Started)
+##  시작하기 (Getting Started)
 
 ### 1. 시스템 요구사항
 - **Python**: 3.9 이상 가이드 (PyTorch 및 socceraction 호환성)
@@ -112,11 +112,7 @@ cd web
 npm run dev
 ```
 
----
 
-## 📝 관리 수칙 (Operation Rules)
-- **버전 관리**: 모든 산출물은 `config.yaml`의 `version`에 따라 `data/refined/{version}/` 및 `results/{version}/` 경로에 격리되어 관리됩니다.
-- **코드 수정**: 로직 변경 시 반드시 버전을 상향 조정한 후 전체 파이프라인을 재실행합니다.
 
 ---
 *Created by team deTACTer (Team Member: 김태현)*
