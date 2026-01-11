@@ -1,0 +1,47 @@
+clustering:
+  max_sequences: 2000
+  min_samples: 3
+  xi: 0.01
+data:
+  match_info_path: data/match_info.csv
+  raw_data_path: data/raw_data.csv
+  spadl_output_dir: data/spadl
+features:
+  nb_prev_actions: 3
+model:
+  learning_rate: 0.03
+  max_depth: 6
+  n_estimators: 300
+  type: CatBoostClassifier
+optimization:
+  direction: maximize
+  metric: roc_auc
+  n_trials: 10
+  params:
+    learning_rate:
+      high: 0.3
+      log: true
+      low: 0.01
+    max_depth:
+      high: 10
+      low: 4
+    n_estimators:
+      high: 1000
+      low: 100
+    nr_actions:
+      high: 7
+      low: 3
+  study_name: vaep_v50_optimization
+sequence:
+  attack_len: 4
+  buildup_len: 4
+  min_pass_count: 3
+traclus:
+  epsilon: 0.05
+  mdl_cost_weight: 1.0
+  min_samples: 10
+  w_angle: 1.0
+  w_parallel: 1.0
+  w_perpendicular: 1.0
+version: v5.9 
+
