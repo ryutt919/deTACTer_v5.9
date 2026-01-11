@@ -69,23 +69,44 @@
 
 ## ⚙️ 시작하기 (Getting Started)
 
-### 1. 환경 설정
-```bash
-# 의존성 설치 (Python)
-pip install -r requirements.txt
+### 1. 시스템 요구사항
+- **Python**: 3.9 이상 가이드 (PyTorch 및 socceraction 호환성)
+- **Node.js**: 18.x 이상 가이드 (Vite 기반 프론트엔드)
 
-# 의존성 설치 (Web)
+### 2. 의존성 설치 (Dependencies)
+
+#### Python (Backend & Pipeline)
+프로젝트 루트 폴더에서 다음을 실행합니다.
+```bash
+pip install -r requirements.txt
+```
+**주요 라이브러리:**
+- `socceraction`: 축구 이벤트 데이터를 SPADL 포맷으로 변환 및 VAEP 가치 측정
+- `torch`: 시기별 시퀀스 임베딩을 위한 Autoencoder 로직 (Transformer/GRU)
+- `catboost`: VAEP 확률 예측 모델
+- `optuna`: 하이퍼파라미터 최적화 (TPE Search)
+- `scikit-learn`: OPTICS 밀도 기반 클러스터링
+
+#### Node.js (Web Dashboard)
+`web` 폴더 내에서 패키지를 설치합니다.
+```bash
 cd web
 npm install
 ```
+**주요 프레임워크:**
+- `React 19` & `Vite`: 고성능 프론트엔드 개발 환경
+- `Framer Motion`: 전술 애니메이션 시각화
+- `TailwindCSS`: 현대적이고 반응형인 UI 디자인
+- `Recharts`: VAEP 및 전술 통계 데이터 시각화
 
-### 2. 파이프라인 실행
-`config.yaml`의 버전을 확인한 후 스크립트를 순차적으로 실행합니다.
+### 3. 파이프라인 실행
+`config.yaml`의 버전을 확인한 후 통합 관리 스크립트를 실행합니다.
 ```bash
-python scripts/run_pipeline.py
+python scripts/run_v5_9_final_pipeline.py
 ```
 
-### 3. 웹 대시보드 실행
+### 4. 웹 대시보드 실행
+애니메이션 생성이 완료된 후 대시보드를 실행합니다.
 ```bash
 cd web
 npm run dev
